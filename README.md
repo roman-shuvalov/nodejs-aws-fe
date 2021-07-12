@@ -3,5 +3,5 @@
 [Cloudfront](https://d7hdtv9x3an0b.cloudfront.net/)
 
 ## Serverless
-[S3 bucket](http://node-aws-fe.s3-website-us-east-1.amazonaws.com/) \
-[Cloudfront](https://d7arsuwkngzcq.cloudfront.net/)
+[S3 bucket](http://node-aws-fe.s3-website-eu-west-1.amazonaws.com/) \
+[Cloudfront](https://d2vdbjor2dbwpy.cloudfront.net/)
