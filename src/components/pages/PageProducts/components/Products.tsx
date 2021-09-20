@@ -35,7 +35,16 @@ export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    axios.get(`${API_PATHS.bff}/products`)
+    const hash = document.location.hash;
+    const keyVals = hash.split('&');
+    const tokenType = String(keyVals.find(keyVal => keyVal.indexOf('token_type') > -1)).split('=')[1];
+    const idToken = String(keyVals.find(keyVal => keyVal.indexOf('id_token') > -1)).split('=')[1];
+
+    axios.get(`${API_PATHS.bff}/products`, {
+      headers: {
+        Authorization: `${tokenType} ${idToken}`,
+      }
+    })
       .then(res => setProducts(res.data));
   }, [])
 
